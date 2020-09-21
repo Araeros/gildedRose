@@ -27,6 +27,11 @@ class GildedRose {
                 case "Sulfuras, Hand of Ragnaros":
                     break;
 
+                /*
+                 On a choisi de mettre les 'Si' à la suite les uns des autres pour éviter des imbrications et améliorer la lisibilité,
+                 effectivement cela duplique légérement le code mais dans une méthode de cette taille là je pense que la différence est infime.
+                 Comme en plus la méthode ajoute de la qualité plusieurs fois il fallait vérifier à chaques fois si elle ne dépassait pas 50.
+                 */
                 case "Backstage passes to a TAFKAL80ETC concert":
                     if (items[i].quality < 50) {
                         items[i].quality = items[i].quality + 1;
@@ -45,6 +50,7 @@ class GildedRose {
                     }
                     break;
 
+                //Ce cas permettra de gérer tous les objets 'classiques' qui ne sont pas pris en compte dans les cas précédents
                 default :
                     if(items[i].quality>0) {
                         items[i].quality = items[i].quality - 1;
