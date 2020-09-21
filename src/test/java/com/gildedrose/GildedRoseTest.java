@@ -415,5 +415,58 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(quality));
     }
 
+    @Test
+    void cake_quality_update() {
+        int quality = 0;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality));
+    }
+
+    @Test
+    void cake_quality_update_2() {
+        int quality = 0;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", 1, quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality));
+    }
+
+    @Test
+    void cake_quality_update_3() {
+        int quality = 30;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality-2));
+    }
+
+    @Test
+    void cake_quality_update_4() {
+        int quality = 30;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", 1, quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality-1));
+    }
+
+    @Test
+    void cake_quality_update_5() {
+        int quality = -10;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality));
+    }
+
+    @Test
+    void cake_quality_update_6() {
+        int quality = -10;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", 1, quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality));
+    }
 
 }
