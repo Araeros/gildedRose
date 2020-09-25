@@ -1,6 +1,6 @@
 # Gilded Rose Refactoring Kata
 
-  Ce projet a pour but de nous initier au refactoring. Dans le cadre de l'UE 'Génie Logiciel Avancée' notre enseignant nous a fortement conseillé d'utiliser git pour avoir un gestionnaire de version et povoir récupérer d'anciennes versions après modofication du code.
+  Ce projet a pour but de nous initier au refactoring. Dans le cadre de l'UE 'Génie Logiciel Avancée' notre enseignant nous a fortement conseillé d'utiliser git pour avoir un gestionnaire de version et pouvoir récupérer d'anciennes versions après modification du code.
   Ce GitHub a pour vocation d'assurer un suivi du projet mais également de permettre de travailler à plusieurs sur la même source tout en évitant les conflits.
   
 ## Better Code Hub
