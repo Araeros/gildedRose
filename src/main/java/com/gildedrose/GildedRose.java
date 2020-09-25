@@ -22,8 +22,8 @@ class GildedRose {
         }
     }
 
-	public void ragnarosQuality(int i){
-		return;
+	public void ragnarosQuality(){
+
 	}
 
 	public void backstageQuality(int i){
@@ -72,7 +72,7 @@ class GildedRose {
 
                 //On note ce cas même si on effectue aucunes actions pour éviter le case default
                 case "Sulfuras, Hand of Ragnaros":
-                	ragnarosQuality(i);
+                	ragnarosQuality();
                     break;
 
                 case "Backstage passes to a TAFKAL80ETC concert":

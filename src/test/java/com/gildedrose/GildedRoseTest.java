@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.*;
 class GildedRoseTest {
 
     @Test
-    void elixir_quality_update() {
+    void elixirPositiveQualityPositiveSellIn() {
     	int quality = 6;
         Item[] items = new Item[] {new Item("Elixir of the Mongoose",1,quality)};
         GildedRose app = new GildedRose(items);
@@ -16,7 +16,7 @@ class GildedRoseTest {
     }
     
     @Test
-    void elixir_quality_update_2() {
+    void elixirNegativeQualityPositiveSellIn() {
     	int quality = -1;
         Item[] items = new Item[] {new Item("Elixir of the Mongoose",1,quality)};
         GildedRose app = new GildedRose(items);
@@ -25,7 +25,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void elixir_quality_update_3() {
+    void elixirPositiveQualityNegativeSellIn() {
         int quality = 10;
         Item[] items = new Item[] {new Item("Elixir of the Mongoose",-10,quality)};
         GildedRose app = new GildedRose(items);
@@ -34,7 +34,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void elixir_quality_update_4() {
+    void elixirLimitedQualityNegativeSellIn() {
         int quality = 1;
         Item[] items = new Item[] {new Item("Elixir of the Mongoose",-10,quality)};
         GildedRose app = new GildedRose(items);
@@ -43,7 +43,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void elixir_quality_update_5() {
+    void elixirNegativeQualityNegativeSellIn() {
         int quality = -1;
         Item[] items = new Item[] {new Item("Elixir of the Mongoose",-1,quality)};
         GildedRose app = new GildedRose(items);
@@ -52,7 +52,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void elixir_quality_update_6() {
+    void elixirLimitedQualityPositiveSellIn() {
         int quality = 10;
         Item[] items = new Item[] {new Item("Elixir of the Mongoose",10,quality)};
         GildedRose app = new GildedRose(items);
