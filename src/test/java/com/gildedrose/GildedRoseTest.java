@@ -493,7 +493,7 @@ class GildedRoseTest {
         Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(quality-3));
+        assertThat(app.items[0].quality, is(0)); //Quality-3
     }
 
     @Test
@@ -502,7 +502,7 @@ class GildedRoseTest {
         Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(quality-2));
+        assertThat(app.items[0].quality, is(0));//Quality-2
     }
 
     @Test
@@ -511,7 +511,7 @@ class GildedRoseTest {
         Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(quality-1));
+        assertThat(app.items[0].quality, is(0));//Quality-1
     }
 
     @Test
@@ -520,7 +520,7 @@ class GildedRoseTest {
         Item[] items = new Item[]{new Item("Conjured Mana Cake", 1, quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(quality-1));
+        assertThat(app.items[0].quality, is(0));//Quality-1
     }
 
 }
