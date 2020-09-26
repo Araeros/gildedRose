@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-// ceci est un test
 class GildedRoseTest {
 
     @Test
@@ -62,7 +61,7 @@ class GildedRoseTest {
     }
     
     @Test
-    void brie_quality_update() {
+    void briePositiveQualityNegativeSellIn() {
     	int quality = 60;
         Item[] items = new Item[] {new Item("Aged Brie",-1,quality)};
         GildedRose app = new GildedRose(items);
@@ -71,7 +70,7 @@ class GildedRoseTest {
     }
     
     @Test
-    void brie_quality_update_2() {
+    void brieLimitedQualityNegativeSellIn() {
     	int quality = 49;
         Item[] items = new Item[] {new Item("Aged Brie",-1,quality)};
         GildedRose app = new GildedRose(items);
@@ -80,8 +79,8 @@ class GildedRoseTest {
     }
 
     @Test
-    void brie_quality_update_3() {
-        int quality = 6;
+    void brieZeroQualityNegativeSellIn() {
+        int quality = 0;
         Item[] items = new Item[] {new Item("Aged Brie",-1,quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -89,7 +88,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void brie_quality_update_4() {
+    void briePositiveQualityPositiveSellIn() {
         int quality = 60;
         Item[] items = new Item[] {new Item("Aged Brie",1,quality)};
         GildedRose app = new GildedRose(items);
@@ -98,7 +97,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void brie_quality_update_5() {
+    void brieLimitedQualityPositiveSellIn() {
         int quality = 49;
         Item[] items = new Item[] {new Item("Aged Brie",1,quality)};
         GildedRose app = new GildedRose(items);
@@ -107,8 +106,8 @@ class GildedRoseTest {
     }
 
     @Test
-    void brie_quality_update_6() {
-        int quality = 6;
+    void brieZeroQualityPositiveSellIn() {
+        int quality = 0;
         Item[] items = new Item[] {new Item("Aged Brie",1,quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -116,7 +115,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void brie_quality_update_7() {
+    void brieNegativeQualityPositiveSellIn() {
         int quality = -6;
         Item[] items = new Item[] {new Item("Aged Brie",1,quality)};
         GildedRose app = new GildedRose(items);
@@ -125,7 +124,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void brie_quality_update_8() {
+    void brieNegativeQualityNegativeSellIn() {
         int quality = -6;
         Item[] items = new Item[] {new Item("Aged Brie",-1,quality)};
         GildedRose app = new GildedRose(items);
@@ -134,7 +133,7 @@ class GildedRoseTest {
     }
     
     @Test
-    void passes_quality_update() {
+    void passesPositiveQualityNegativeSellIn() {
     	int quality = 60;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",-1,quality)};
         GildedRose app = new GildedRose(items);
@@ -143,7 +142,7 @@ class GildedRoseTest {
     }
     
     @Test
-    void passes_quality_update_2() {
+    void passesHighLimitedQualityNegativeSellIn() {
     	int quality = 50;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",-10,quality)};
         GildedRose app = new GildedRose(items);
@@ -152,7 +151,7 @@ class GildedRoseTest {
     }
     
     @Test
-    void passes_quality_update_3() {
+    void passesLimitedQualityNegativeSellIn() {
     	int quality = 49;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",-10,quality)};
         GildedRose app = new GildedRose(items);
@@ -161,8 +160,8 @@ class GildedRoseTest {
     }
     
     @Test
-    void passes_quality_update_4() {
-    	int quality = 6;
+    void passesZeroQualityNegativeSellIn() {
+    	int quality = 0;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",-1,quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -170,7 +169,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_5() {
+    void passesHighQualityPositiveSellIn() {
         int quality = 100;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",2,quality)};
         GildedRose app = new GildedRose(items);
@@ -179,7 +178,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_6() {
+    void passesHighQualityMiddlePositiveSellIn() {
         int quality = 100;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",6,quality)};
         GildedRose app = new GildedRose(items);
@@ -188,7 +187,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_7() {
+    void passesHighQualityHighPositiveSellIn() {
         int quality = 100;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",12,quality)};
         GildedRose app = new GildedRose(items);
@@ -197,7 +196,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_8() {
+    void passesLimitedQualityPositiveSellIn() {
         int quality = 49;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",2,quality)};
         GildedRose app = new GildedRose(items);
@@ -206,7 +205,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_9() {
+    void passesLimitedQualityMiddlePositiveSellIn() {
         int quality = 49;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",6,quality)};
         GildedRose app = new GildedRose(items);
@@ -215,7 +214,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_10() {
+    void passesLimitedQualityHighPositiveSellIn() {
         int quality = 49;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",12,quality)};
         GildedRose app = new GildedRose(items);
@@ -224,7 +223,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_11() {
+    void passesLowLimitedQualityPositiveSellIn() {
         int quality = 48;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",2,quality)};
         GildedRose app = new GildedRose(items);
@@ -233,7 +232,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_12() {
+    void passesLowLimitedQualityMiddlePositiveSellIn() {
         int quality = 48;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",7,quality)};
         GildedRose app = new GildedRose(items);
@@ -242,7 +241,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_13() {
+    void passesLowLimitedQualityHighPositiveSellIn() {
         int quality = 48;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",12,quality)};
         GildedRose app = new GildedRose(items);
@@ -251,7 +250,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_14() {
+    void passesPositiveQualityPositiveSellIn() {
         int quality = 4;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",2,quality)};
         GildedRose app = new GildedRose(items);
@@ -260,7 +259,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_15() {
+    void passesPositiveQualityMiddlePositiveSellIn() {
         int quality = 4;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",8,quality)};
         GildedRose app = new GildedRose(items);
@@ -269,7 +268,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void passes_quality_update_16() {
+    void passesPositiveQualityHighPositiveSellIn() {
         int quality = 4;
         Item[] items = new Item[] {new Item("Backstage passes to a TAFKAL80ETC concert",12,quality)};
         GildedRose app = new GildedRose(items);
@@ -278,7 +277,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void sulfuras_quality_update() {
+    void sulfurasPositiveQualityPositiveSellIn() {
         int quality = 40;
         Item[] items = new Item[] {new Item("Sulfuras, Hand of Ragnaros",1,quality)};
         GildedRose app = new GildedRose(items);
@@ -287,7 +286,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void sulfuras_quality_update_2() {
+    void sulfurasPositiveQualityNegativeSellIn() {
         int quality = 40;
         Item[] items = new Item[] {new Item("Sulfuras, Hand of Ragnaros",-1,quality)};
         GildedRose app = new GildedRose(items);
@@ -296,7 +295,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void sulfuras_quality_update_3() {
+    void sulfurasNegativeQualityPositiveSellIn() {
         int quality = -10;
         Item[] items = new Item[] {new Item("Sulfuras, Hand of Ragnaros",1,quality)};
         GildedRose app = new GildedRose(items);
@@ -305,7 +304,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void sulfuras_quality_update_4() {
+    void sulfurasNegativeQualityNegativeSellIn() {
         int quality = -10;
         Item[] items = new Item[] {new Item("Sulfuras, Hand of Ragnaros",-1,quality)};
         GildedRose app = new GildedRose(items);
@@ -314,7 +313,25 @@ class GildedRoseTest {
     }
 
     @Test
-    void sword_quality_update() {
+    void sulfurasZeroQualityNegativeSellIn() {
+        int quality = 0;
+        Item[] items = new Item[] {new Item("Sulfuras, Hand of Ragnaros",-1,quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality));
+    }
+
+    @Test
+    void sulfurasZeroQualityPositiveSellIn() {
+        int quality = 0;
+        Item[] items = new Item[] {new Item("Sulfuras, Hand of Ragnaros",1,quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality));
+    }
+
+    @Test
+    void swordPositiveQualityPositiveSellIn() {
         int quality = 6;
         Item[] items = new Item[] {new Item("Barbarian Sword",1,quality)};
         GildedRose app = new GildedRose(items);
@@ -322,7 +339,7 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(quality-1));
     }
     @Test
-    void sword_quality_update_2() {
+    void swordPositiveQualityNegativeSellIn() {
         int quality = 6;
         Item[] items = new Item[] {new Item("Barbarian Sword",-1,quality)};
         GildedRose app = new GildedRose(items);
@@ -330,7 +347,7 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(quality-2));
     }
     @Test
-    void sword_quality_update_3() {
+    void swordNegativeQualityPositiveSellIn() {
         int quality = -6;
         Item[] items = new Item[] {new Item("Barbarian Sword",1,quality)};
         GildedRose app = new GildedRose(items);
@@ -338,7 +355,7 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(quality));
     }
     @Test
-    void sword_quality_update_4() {
+    void swordNegativeQualityNegativeSellIn() {
         int quality = -6;
         Item[] items = new Item[] {new Item("Barbarian Sword",-1,quality)};
         GildedRose app = new GildedRose(items);
@@ -346,7 +363,7 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(quality));
     }
     @Test
-    void sword_quality_update_5() {
+    void swordZeroQualityPositiveSellIn() {
         int quality = 0;
         Item[] items = new Item[] {new Item("Barbarian Sword",1,quality)};
         GildedRose app = new GildedRose(items);
@@ -354,7 +371,7 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(quality));
     }
     @Test
-    void sword_quality_update_6() {
+    void swordZeroQualityNegativeSellIn() {
         int quality = 0;
         Item[] items = new Item[] {new Item("Barbarian Sword",-1,quality)};
         GildedRose app = new GildedRose(items);
@@ -363,7 +380,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void map_quality_update() {
+    void mapZeroQualityNegativeSellIn() {
         int quality = 0;
         Item[] items = new Item[]{new Item("Enchanted Treasure Map", -1, quality)};
         GildedRose app = new GildedRose(items);
@@ -372,7 +389,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void map_quality_update_2() {
+    void mapZeroQualityPositiveSellIn() {
         int quality = 0;
         Item[] items = new Item[]{new Item("Enchanted Treasure Map", 1, quality)};
         GildedRose app = new GildedRose(items);
@@ -381,7 +398,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void map_quality_update_3() {
+    void mapPositiveQualityNegativeSellIn() {
         int quality = 30;
         Item[] items = new Item[]{new Item("Enchanted Treasure Map", -1, quality)};
         GildedRose app = new GildedRose(items);
@@ -390,7 +407,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void map_quality_update_4() {
+    void mapPositiveQualityPositiveSellIn() {
         int quality = 30;
         Item[] items = new Item[]{new Item("Enchanted Treasure Map", 1, quality)};
         GildedRose app = new GildedRose(items);
@@ -399,7 +416,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void map_quality_update_5() {
+    void mapNegativeQualityNegativeSellIn() {
         int quality = -10;
         Item[] items = new Item[]{new Item("Enchanted Treasure Map", -1, quality)};
         GildedRose app = new GildedRose(items);
@@ -408,7 +425,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void map_quality_update_6() {
+    void mapNegativeQualityPositiveSellIn() {
         int quality = -10;
         Item[] items = new Item[]{new Item("Enchanted Treasure Map", 1, quality)};
         GildedRose app = new GildedRose(items);
@@ -417,7 +434,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void cake_quality_update() {
+    void conjuredZeroQualityNegativeSellIn() {
         int quality = 0;
         Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
         GildedRose app = new GildedRose(items);
@@ -426,7 +443,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void cake_quality_update_2() {
+    void conjuredZeroQualityPositiveSellIn() {
         int quality = 0;
         Item[] items = new Item[]{new Item("Conjured Mana Cake", 1, quality)};
         GildedRose app = new GildedRose(items);
@@ -435,8 +452,53 @@ class GildedRoseTest {
     }
 
     @Test
-    void cake_quality_update_3() {
+    void conjuredPositiveQualityNegativeSellIn() {
         int quality = 30;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality-4));
+    }
+
+    @Test
+    void conjuredPositiveQualityPositiveSellIn() {
+        int quality = 30;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", 1, quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality-2));
+    }
+
+    @Test
+    void conjuredNegativeQualityNegativeSellIn() {
+        int quality = -10;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality));
+    }
+
+    @Test
+    void conjuredNegativeQualityPositiveSellIn() {
+        int quality = -10;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", 1, quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality));
+    }
+
+    @Test
+    void conjuredHighLimitedQualityNegativeSellIn() {
+        int quality = 3;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(quality-3));
+    }
+
+    @Test
+    void conjuredMiddleLimitedQualityNegativeSellIn() {
+        int quality = 2;
         Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -444,30 +506,21 @@ class GildedRoseTest {
     }
 
     @Test
-    void cake_quality_update_4() {
-        int quality = 30;
-        Item[] items = new Item[]{new Item("Conjured Mana Cake", 1, quality)};
+    void conjuredLowLimitedQualityNegativeSellIn() {
+        int quality = 1;
+        Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertThat(app.items[0].quality, is(quality-1));
     }
 
     @Test
-    void cake_quality_update_5() {
-        int quality = -10;
-        Item[] items = new Item[]{new Item("Conjured Mana Cake", -1, quality)};
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(quality));
-    }
-
-    @Test
-    void cake_quality_update_6() {
-        int quality = -10;
+    void conjuredLimitedQualityPositiveSellIn() {
+        int quality = 1;
         Item[] items = new Item[]{new Item("Conjured Mana Cake", 1, quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(quality));
+        assertThat(app.items[0].quality, is(quality-1));
     }
 
 }
