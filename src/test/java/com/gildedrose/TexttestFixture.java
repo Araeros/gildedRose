@@ -18,9 +18,10 @@ public class TexttestFixture {
                 new Item("Conjured Mana Cake", -3, 8),
                 new Item("Conjured Mana Cake", 1, 5)
         };
-
+        //Erreur PMD, cette variable est bien définie
         GildedRose app = new GildedRose(items);
 
+        //Erreur PMD, cette variable est redéfinie qu'en cas de passage en paramètre d'une valeur
         int days = 4;
         if (args.length > 0) {
             days = Integer.parseInt(args[0]) + 1;

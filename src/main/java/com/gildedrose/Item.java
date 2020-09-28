@@ -2,11 +2,11 @@ package com.gildedrose;
 
 public class Item {
 
-    public String name;
+    public transient String name;
 
-    public int sellIn;
+    public transient  int sellIn;
 
-    public int quality;
+    public transient int quality;
 
     public Item(String name, int sellIn, int quality) {
         this.name = name;

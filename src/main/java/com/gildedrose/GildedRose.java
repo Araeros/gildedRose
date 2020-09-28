@@ -1,7 +1,7 @@
 package com.gildedrose;
 
 class GildedRose {
-	Item[] items;
+	public transient Item[] items;
 	/*
 	On a choisit de gérer les limites de la qualité par des constantes pour ne
     pas avoir à les changer dans chaques fonctions en cas de modifications
@@ -109,6 +109,7 @@ class GildedRose {
                     } else {
                         basicObjectQuality(i);
                     }
+                    break;
             }
         }
     }
