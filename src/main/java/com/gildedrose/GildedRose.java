@@ -3,7 +3,7 @@ package com.gildedrose;
 class GildedRose {
 	Item[] items;
 	/*
-	On a choisit de gérer la qualité par des constantes pour ne
+	On a choisit de gérer les limites de la qualité par des constantes pour ne
     pas avoir à les changer dans chaques fonctions en cas de modifications
     */
 	static final int maxQuality = 50;
@@ -12,7 +12,7 @@ class GildedRose {
 	public GildedRose(Item[] items) {
 		this.items = items;
 	}
-
+/*
 	//Dans le cas ou items[i].name == "Aged Brie"
 	public void agedBrieQuality(int i){
 		if (items[i].quality < maxQuality)
@@ -33,12 +33,7 @@ class GildedRose {
 	}
 
 	public void backstageQuality(int i){
-		/*
-            On a choisi de mettre les 'Si' à la suite les uns des autres pour éviter des imbrications et améliorer la lisibilité,
-            effectivement cela duplique légérement le code mais dans une méthode de cette taille là je pense que la différence est infime.
-            Comme en plus la méthode ajoute de la qualité plusieurs fois il fallait vérifier à chaques fois si elle ne dépassait pas 50.
-        */
-		if (items[i].quality < maxQuality)
+	   if (items[i].quality < maxQuality)
 		{
         	items[i].quality = items[i].quality + 1;
         }
@@ -115,5 +110,5 @@ class GildedRose {
                     }
             }
         }
-    }
+    }*/
 }
