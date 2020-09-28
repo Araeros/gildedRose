@@ -6,13 +6,14 @@ class GildedRose {
 	On a choisit de gérer les limites de la qualité par des constantes pour ne
     pas avoir à les changer dans chaques fonctions en cas de modifications
     */
+
 	static final int maxQuality = 50;
 	static final int minQuality = 0;
 
 	public GildedRose(Item[] items) {
 		this.items = items;
 	}
-/*
+
 	//Dans le cas ou items[i].name == "Aged Brie"
 	public void agedBrieQuality(int i){
 		if (items[i].quality < maxQuality)
@@ -110,5 +111,5 @@ class GildedRose {
                     }
             }
         }
-    }*/
+    }
 }
