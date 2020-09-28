@@ -34,8 +34,6 @@ public class TexttestFixture {
             }
             System.out.println();
             app.updateQuality();
-            //Code d'appel de fonction si la méthode update quality est déplacée dans le code de la classe Item
-
         }
     }
 
