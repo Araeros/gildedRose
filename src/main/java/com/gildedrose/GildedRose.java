@@ -1,18 +1,42 @@
 package com.gildedrose;
 
+/**
+ * GildedRose est la classe permettant de représenter la taverne.
+ *
+ * @author PRIVAT Nicolas_VOQUER Romain
+ * @version 1.0
+ */
+
 class GildedRose {
 
   //Variable et méthodes statiques
   static final int MINQUALITY = 0;
   static final int MAXQUALITY = 50;
 
-  private transient Item[] items;
-  /*On a choisit de gérer les limites de la qualité par des constantes pour ne
-  pas avoir à les changer dans chaques fonctions en cas de modifications */
+  private transient Item[] items; // Cette variable ne sera pas sérialisée
+
+  /**
+   * Constructeur de la classe objet.
+   *
+   * @param nom
+   *            le nom de l'objet.
+   * @param date
+   *            le SellIn de l'objet.
+   * @param qualite
+   *            la qualité de l'objet.
+   */
+
   GildedRose(Item[] listItems) {
     this.items = listItems;
   }
-  //Dans le cas ou items[i].name == "Aged Brie"
+
+  /**
+   * Met à jour la qualité du 'Aged Brie'.
+   *
+   * @param i
+   *            l'index de l'objet auquel on veut modifier la qualité.
+   */
+
   void agedBrieQuality(int i) {
     if (items[i].getQuality() < MAXQUALITY) {
       items[i].setQuality(items[i].getQuality() + 1);
@@ -24,9 +48,23 @@ class GildedRose {
     }
   }
 
+  /**
+   * Met à jour la qualité du 'Sulfuras, Hand of Ragnaros'.
+   *
+   * @param i
+   *            l'index de l'objet auquel on veut modifier la qualité.
+   */
+
   void ragnarosQuality(int i) {
 
   }
+
+  /**
+   * Met à jour la qualité du 'Backstage passes to a TAFKAL80ETC concert'.
+   *
+   * @param i
+   *            l'index de l'objet auquel on veut modifier la qualité.
+   */
 
   void backstageQuality(int i) {
     if (items[i].getQuality() < MAXQUALITY) {
@@ -44,6 +82,13 @@ class GildedRose {
     }
   }
 
+  /**
+   * Met à jour la qualité de tous les objets non traités dans les autres cas.
+   *
+   * @param i
+   *            l'index de l'objet auquel on veut modifier la qualité.
+   */
+
   void basicObjectQuality(int i) {
     if (items[i].getQuality() > MINQUALITY) {
       items[i].setQuality(items[i].getQuality() - 1);
@@ -53,6 +98,13 @@ class GildedRose {
       items[i].setQuality(items[i].getQuality() - 1);
     }
   }
+
+  /**
+   * Met à jour la qualité dues objets 'Conjured'.
+   *
+   * @param i
+   *            l'index de l'objet auquel on veut modifier la qualité.
+   */
 
   void conjuredObjectQuality(int i) {
     //Les items 'Conjured' voient leur qualité se dégrader 2 fois plus vite que la normale.
@@ -68,6 +120,11 @@ class GildedRose {
       items[i].setQuality(items[i].getQuality() - 1);
     }
   }
+
+  /**
+   * Met à jour la qualité des objets de la taverne.
+   *
+   */
 
   void updateQuality() {
     for (int i = 0; i < items.length; i++) {
@@ -98,10 +155,23 @@ class GildedRose {
       }
     }
   }
+
   //Accesseurs des variables de gildedRose
+  /**
+   * Renvoie la liste d'objets.
+   *
+   */
+
   Item[] getItems() {
     return this.items;
   }
+
+  /**
+   * Met à jour la liste des objets.
+   *
+   * @param listItems
+   *            la liste d'objets qu'on veut appliquer à notre taverne.
+   */
 
   void setItems(Item[] listItems) {
     this.items = listItems;

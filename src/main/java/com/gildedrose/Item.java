@@ -3,12 +3,11 @@ package com.gildedrose;
 /**
  * Item est la classe permettant la représentation d'un objet.
  *
- * @author PRIVAT Nicolas & VOQUER Romain
+ * @author PRIVAT Nicolas_VOQUER Romain
  * @version 1.0
  */
 
 public class Item {
-  //
   private transient String name;
   private transient  int sellIn;
   private transient int quality;

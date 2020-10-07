@@ -2,13 +2,13 @@
  *  Ces classes permettent la modélisation d'une taverne nommée 'GildedRose'.
  *  <p>
  *    Ce package contient :
- *    - Gildedrose.java
+ *    - GildedRose.java
  *    - Item.java
- *    - Gildedrosetest.java
- *    - TexttestFixture.java
+ *    - GildedRoseTest.java
+ *    - TextTestFixture.java
  *  </p>
  *    @since 1.0
- *    @author PRIVAT Nicolas & VOQUER Romain
+ *    @author PRIVAT Nicolas_VOQUER Romain
  *    @version 1.0
  */
 package com.gildedrose;
