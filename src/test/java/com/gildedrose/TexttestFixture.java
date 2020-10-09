@@ -31,16 +31,19 @@ public class TexttestFixture {
       new Item("Conjured Mana Cake", -3, 8),
       new Item("Conjured Mana Cake", 1, 5)
     };
-    //Erreur PMD, cette variable est bien définie
     GildedRose app = new GildedRose();
     app.setItems(items);
 
     //Erreur PMD, cette variable est redéfinie qu'en cas de passage en paramètre d'une valeur
     int days = 4;
+    //FIXME le assert n'a aucun impact sur le code
     if (args.length > 0) {
+      assert Integer.parseInt(args[0]) <= 0 :
+        "La durée de vie de la taverne ne peut pas être négative.";
       days = Integer.parseInt(args[0]) + 1;
     }
-
+    System.out.println("days : "+days);
+    
     for (int i = 0; i < days; i++) {
       System.out.println("-------- day " + i + " --------");
       System.out.println("name, sellIn, quality");
