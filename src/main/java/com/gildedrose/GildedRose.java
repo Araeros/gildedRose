@@ -6,24 +6,28 @@ package com.gildedrose;
  * @author PRIVAT Nicolas_VOQUER Romain
  * @version 1.0
  */
-
 class GildedRose {
 
   //Variable et méthodes statiques
   static final int MINQUALITY = 0;
   static final int MAXQUALITY = 50;
 
-  private transient Item[] items; // Cette variable ne sera pas sérialisée
+  private transient Item[] items; //Cette variable ne sera pas sérialisée
 
   /**
-   * Constructeur de la classe objet.
+   * Constructeur par défaut de la classe GildedRose. On ajoute la liste item avec le setter ultérieurement.
    *
-   * @param nom
-   *            le nom de l'objet.
-   * @param date
-   *            le SellIn de l'objet.
-   * @param qualite
-   *            la qualité de l'objet.
+   */
+
+  GildedRose() {
+
+  }
+
+  /**
+   * Constructeur paramétré de la classe GildedRose.
+   *
+   * @param listItems
+   *            La liste d'items gérée par la taverne.
    */
 
   GildedRose(Item[] listItems) {
@@ -55,6 +59,7 @@ class GildedRose {
    *            l'index de l'objet auquel on veut modifier la qualité.
    */
 
+  //Nous avons ici laissé le paramètre i, pour éviter d'avoir à modifier dans le switch en cas d'ajout de corps.
   void ragnarosQuality(int i) {
 
   }
@@ -160,6 +165,8 @@ class GildedRose {
   /**
    * Renvoie la liste d'objets.
    *
+   * @return
+   *            La liste des objets de la taverne.
    */
 
   Item[] getItems() {

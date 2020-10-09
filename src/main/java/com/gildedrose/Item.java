@@ -6,7 +6,6 @@ package com.gildedrose;
  * @author PRIVAT Nicolas_VOQUER Romain
  * @version 1.0
  */
-
 public class Item {
   private transient String name;
   private transient  int sellIn;
@@ -61,6 +60,8 @@ public class Item {
 
   /**
    * Renvoie le nom d'un objet.
+   * @return
+   *            le nom de l'objet.
    */
   String getName() {
     return this.name;
@@ -68,6 +69,9 @@ public class Item {
 
   /**
    * Renvoie le SellIn d'un objet
+   *
+   * @return
+   *            la durée de vie de l'objet.
    */
   int getSellIn() {
     return this.sellIn;
@@ -75,6 +79,9 @@ public class Item {
 
   /**
    * Renvoie la qualité d'un objet
+   *
+   * @return
+   *            la qualité de l'objet.
    */
   int getQuality() {
     return this.quality;
@@ -85,6 +92,6 @@ public class Item {
    */
   @Override
   public String toString() {
-    return this.name + " a un SellIn de " + this.sellIn + " et une qualité de " + this.quality + ".";
+    return this.name + " : SellIn = " + this.sellIn + ", Quality = " + this.quality + ".";
   }
 }
