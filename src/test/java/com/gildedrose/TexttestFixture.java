@@ -37,19 +37,12 @@ public class TexttestFixture {
 
     //Erreur PMD, cette variable est redéfinie qu'en cas de passage en paramètre d'une valeur
     int days = 4;
+    days = getDays(args, days);
 
-    if (args.length > 0) {
-      try {
-        if (Integer.parseInt(args[0]) <= 0) {
-          throw new IllegalArgumentException("La durée de vie de la taverne ne peut pas être négative.");
-        }
-      }catch (IllegalArgumentException e){
-        System.out.println(e.getMessage());
-        exit(1);
-      }
-      days = Integer.parseInt(args[0]) + 1;
-    }
+    initialiserTaverne(items, app, days);
+  }
 
+  private static void initialiserTaverne(Item[] items, GildedRose app, int days) {
     for (int i = 0; i < days; i++) {
       System.out.println("-------- day " + i + " --------");
       System.out.println("name, sellIn, quality");
@@ -58,6 +51,25 @@ public class TexttestFixture {
       }
       System.out.println();
       app.updateQuality();
+    }
+  }
+
+  private static int getDays(String[] args, int days) {
+    if (args.length > 0) {
+      try {
+        testArgument(args);
+      }catch (IllegalArgumentException e){
+        System.out.println(e.getMessage());
+        exit(1);
+      }
+      days = Integer.parseInt(args[0]) + 1;
+    }
+    return days;
+  }
+
+  private static void testArgument(String[] args) throws IllegalArgumentException{
+    if (Integer.parseInt(args[0]) <= 0) {
+      throw new IllegalArgumentException("La durée de vie de la taverne ne peut pas être négative.");
     }
   }
 }
